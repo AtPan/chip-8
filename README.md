@@ -14,6 +14,4 @@ The clear command is called via 'system("clear")' to clear the terminal and avoi
 
 -- Known Issues --
 
-Upon exiting the debug build, there will likely be warnings about several memory leaks.
-This is almost definitely an SDL issue. Whenever SDL is involved it seems like there is a memory leak problem.
-The memory leaked isn't much (probably 3kb at worst), but still noticed by gcc's memory sanitizer.
+* Upon exiting the debug build, there will likely be warnings about several memory leaks. This is almost definitely an SDL issue. Whenever SDL is involved it seems like there is a memory leak problem. The memory leaked isn't much (probably 3kb at worst), but still noticed by gcc's memory sanitizer.
