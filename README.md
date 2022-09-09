@@ -11,3 +11,9 @@ Debug mode requires manual stepping through every opcode and displays three item
   3. The state of the processor after the opcode has executed
 To step to the next command, press 'Enter' while the SDL2 window is focused. It is recommnended to keep the terminal behind the emulator window, to see both screens simultaneously.
 The clear command is called via 'system("clear")' to clear the terminal and avoid clutter.
+
+-- Known Issues --
+
+Upon exiting the debug build, there will likely be warnings about several memory leaks.
+This is almost definitely an SDL issue. Whenever SDL is involved it seems like there is a memory leak problem.
+The memory leaked isn't much (probably 3kb at worst), but still noticed by gcc's memory sanitizer.
